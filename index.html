@@ -37,7 +37,10 @@ nav.scrolled{background:rgba(26,47,64,.95);backdrop-filter:blur(12px)}
 .hero-tag{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:32px;opacity:0;animation:fadeUp .8s .2s forwards}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(52px,7vw,96px);line-height:1.05;color:#fff;letter-spacing:-2px;margin-bottom:40px;opacity:0;animation:fadeUp .8s .4s forwards}
 .hero h1 em{color:var(--green);font-style:italic}
-.hero-sub{font-size:18px;color:rgba(255,255,255,.5);max-width:480px;line-height:1.7;margin-bottom:56px;font-weight:300;opacity:0;animation:fadeUp .8s .6s forwards}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.5);max-width:480px;line-height:1.7;margin-bottom:32px;font-weight:300;opacity:0;animation:fadeUp .8s .6s forwards}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.3);border-radius:50px;padding:10px 20px;margin-bottom:40px;opacity:0;animation:fadeUp .8s .7s forwards}
+.pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;animation:scrollPulse 2s infinite}
+.hero-badge span{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;color:var(--green)}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp .8s .8s forwards}
 .btn-primary{background:var(--green);color:#fff;padding:16px 36px;border-radius:50px;font-family:'Syne',sans-serif;font-weight:700;font-size:14px;text-decoration:none;letter-spacing:.5px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
 .btn-primary:hover{background:var(--green-dark);transform:translateY(-2px);box-shadow:0 16px 40px rgba(46,204,113,.3)}
@@ -54,7 +57,7 @@ nav.scrolled{background:rgba(26,47,64,.95);backdrop-filter:blur(12px)}
 .stat-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(0,0,0,.5);margin-top:8px}
 
 /* ── PROBLEMA ── */
-.problem{padding:120px 40px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.problem{padding:120px 40px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1200px;margin:0 auto}
 .problem-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:24px}
 .problem h2{font-family:'DM Serif Display',serif;font-size:clamp(36px,4vw,56px);line-height:1.1;letter-spacing:-1px;margin-bottom:32px}
 .problem p{font-size:17px;color:var(--muted);line-height:1.8;font-weight:300}
@@ -69,12 +72,14 @@ nav.scrolled{background:rgba(26,47,64,.95);backdrop-filter:blur(12px)}
 .roles-header{text-align:center;margin-bottom:80px}
 .roles-header .label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:20px}
 .roles-header h2{font-family:'DM Serif Display',serif;font-size:clamp(36px,4vw,56px);color:#fff;letter-spacing:-1px}
-.roles-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;max-width:1200px;margin:0 auto}
-.role-card{background:rgba(255,255,255,.04);padding:40px 24px;text-align:center;border:1px solid rgba(255,255,255,.06);transition:background .3s,transform .3s;cursor:default}
+.roles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;max-width:1200px;margin:0 auto}
+.role-card{background:rgba(255,255,255,.04);padding:36px 22px;text-align:center;border:1px solid rgba(255,255,255,.06);transition:background .3s,transform .3s;cursor:default}
 .role-card:hover{background:rgba(46,204,113,.08);border-color:rgba(46,204,113,.2);transform:translateY(-4px)}
-.role-icon{font-size:36px;margin-bottom:20px;display:block}
+.role-icon{font-size:34px;margin-bottom:18px;display:block}
 .role-name{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:12px}
 .role-desc{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6}
+.roles-note{max-width:1200px;margin:24px auto 0;text-align:center;font-size:13px;color:rgba(255,255,255,.35);font-style:italic}
+.roles-note strong{color:var(--green);font-style:normal}
 
 /* ── FEATURES ── */
 .features{padding:120px 40px;max-width:1200px;margin:0 auto}
@@ -174,6 +179,7 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
   <p class="hero-tag">Gestión de flota vial</p>
   <h1>Tu flota,<br>bajo <em>control</em><br>total.</h1>
   <p class="hero-sub">Sistema de gestión de mantenimiento y operaciones para empresas viales. Cada equipo, cada hora, cada litro — registrado en tiempo real.</p>
+  <div class="hero-badge"><span class="pulse-dot"></span><span>En uso activo — no es un proyecto a futuro</span></div>
   <div class="hero-btns">
     <a href="#contacto" class="btn-primary">Quiero una demo →</a>
     <a href="#features" class="btn-secondary">Ver más</a>
@@ -183,7 +189,7 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">Roles de usuario</div></div>
+  <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">Roles de usuario</div></div>
   <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Web & móvil</div></div>
   <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Instalación requerida</div></div>
   <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Datos en tiempo real</div></div>
@@ -199,10 +205,11 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
     </div>
     <div class="questions">
       <div class="question"><div class="q-dot"></div><p class="q-text">¿Cuánto me cuesta por hora operar cada máquina?</p></div>
-      <div class="question"><div class="q-dot"></div><p class="q-text">¿Qué equipos están trabajando ahora y cuáles parados?</p></div>
       <div class="question"><div class="q-dot"></div><p class="q-text">¿A qué máquina le toca service y cuál ya está vencido?</p></div>
-      <div class="question"><div class="q-dot"></div><p class="q-text">¿Estoy gastando más este mes que el anterior?</p></div>
-      <div class="question"><div class="q-dot"></div><p class="q-text">¿Qué equipo me está costando más de lo que rinde?</p></div>
+      <div class="question"><div class="q-dot"></div><p class="q-text">¿Podés calificar un equipo y saber en este preciso momento si rinde o no?</p></div>
+      <div class="question"><div class="q-dot"></div><p class="q-text">¿Sabés a quién felicitar o reclamar en este preciso momento, sin llamar a una reunión?</p></div>
+      <div class="question"><div class="q-dot"></div><p class="q-text">Luego de una reparación, ¿quién certifica que efectivamente se hizo?</p></div>
+      <div class="question"><div class="q-dot"></div><p class="q-text">¿Podés auditar un repuesto desde que se compra hasta que se instala?</p></div>
       <div class="question"><div class="q-dot"></div><p class="q-text">¿Tengo registro de quién operó y reparó cada equipo?</p></div>
     </div>
   </div>
@@ -218,9 +225,12 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
     <div class="role-card"><span class="role-icon">👷</span><div class="role-name">Operario</div><div class="role-desc">Parte diario con GPS y foto, checklist y novedades desde el celular. Certifica las reparaciones del mecánico.</div></div>
     <div class="role-card"><span class="role-icon">🦺</span><div class="role-name">Jefe de obra</div><div class="role-desc">Asigna equipos y personal. Aprueba partes en lote. Gestiona pedidos de repuestos y certifica reparaciones.</div></div>
     <div class="role-card"><span class="role-icon">🔧</span><div class="role-name">Mecánico</div><div class="role-desc">Registra services y correctivos con firma. Pide repuestos. Ve datos técnicos y manual de cada equipo.</div></div>
+    <div class="role-card"><span class="role-icon">📦</span><div class="role-name">Compras</div><div class="role-desc">Gestiona insumos y repuestos con trazabilidad completa — desde el pedido hasta la instalación.</div></div>
+    <div class="role-card"><span class="role-icon">🛡️</span><div class="role-name">Seguridad e Higiene</div><div class="role-desc">Vencimientos de documentación, checklist de seguridad centralizado e informes para auditorías.</div></div>
     <div class="role-card"><span class="role-icon">🖥️</span><div class="role-name">Admin</div><div class="role-desc">Control total. Configura equipos, calificación, costos, comparativos e informes en tiempo real.</div></div>
     <div class="role-card"><span class="role-icon">📊</span><div class="role-name">Dueño</div><div class="role-desc">Tablero ejecutivo y pantalla TV. Ve el estado, la calificación y los costos de toda la flota desde cualquier dispositivo.</div></div>
   </div>
+  <p class="roles-note">+ <strong>Expansible</strong>: el sistema suma roles y funciones nuevas a medida que tu empresa lo necesita.</p>
 </section>
 
 <!-- FEATURES -->
@@ -242,31 +252,41 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
     </div>
     <div class="feature-item">
       <div class="feature-num">03</div>
-      <div class="feature-title">Control de service preventivo</div>
-      <div class="feature-desc">El sistema calcula solo cuándo toca el próximo service y avisa si está al día, próximo o vencido. Sin planillas ni cálculos a mano.</div>
+      <div class="feature-title">Calificación de operarios</div>
+      <div class="feature-desc">Cada operario recibe una nota según cumplimiento, aprobación de partes y checklist completo. Premiar o reclamar con datos reales, no a ojo.</div>
     </div>
     <div class="feature-item">
       <div class="feature-num">04</div>
+      <div class="feature-title">Control de service preventivo</div>
+      <div class="feature-desc">El sistema calcula solo cuándo toca el próximo service y avisa si está al día, próximo o vencido — proyectado a una semana, un mes o un trimestre.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">05</div>
       <div class="feature-title">Comparativo mes a mes</div>
       <div class="feature-desc">Gráficos de horas, combustible y gastos comparados con el mes anterior y con el mismo mes del año pasado. Filtrá por obra, equipo o período.</div>
     </div>
     <div class="feature-item">
-      <div class="feature-num">05</div>
+      <div class="feature-num">06</div>
       <div class="feature-title">Costo por hora operativa</div>
       <div class="feature-desc">El sistema calcula el costo real de cada equipo por hora en base a aceites, filtros, repuestos y mantenimientos. Cotizá obras con datos reales, no a ojo.</div>
     </div>
     <div class="feature-item">
-      <div class="feature-num">06</div>
+      <div class="feature-num">07</div>
       <div class="feature-title">Repuestos y certificación de reparaciones</div>
       <div class="feature-desc">El mecánico pide repuestos y el jefe genera el pedido formal con un clic. Cada reparación se certifica con firma digital del operario o el jefe.</div>
     </div>
     <div class="feature-item">
-      <div class="feature-num">07</div>
+      <div class="feature-num">08</div>
+      <div class="feature-title">Notificaciones push</div>
+      <div class="feature-desc">Avisos en el celular aunque la app esté cerrada: parte rechazado, nueva asignación, reparación lista para certificar.</div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-num">09</div>
       <div class="feature-title">Firma digital con PIN</div>
       <div class="feature-desc">Cada aprobación, service y certificación queda firmada con un PIN personal. Trazabilidad total de quién hizo qué y cuándo.</div>
     </div>
     <div class="feature-item">
-      <div class="feature-num">08</div>
+      <div class="feature-num">10</div>
       <div class="feature-title">App instalable sin internet</div>
       <div class="feature-desc">Funciona en zonas remotas sin conexión. Captura GPS y fotos, y cuando vuelve el internet sincroniza solo. Disponible en Android e iPhone.</div>
     </div>
@@ -317,7 +337,7 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
       <div class="step-num">4</div>
       <div class="step-time">Mes 1+</div>
       <div class="step-title">Operación normal</div>
-      <div class="step-desc">Autónomo. Soporte continuo y mejoras incluidas.</div>
+      <div class="step-desc">Acompañamiento continuo y mejoras incluidas — el sistema no queda librado a sí mismo.</div>
     </div>
   </div>
 </section>
@@ -333,11 +353,11 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
       <div>
         <p style="font-size:17px;color:var(--muted);line-height:1.8;font-weight:300;margin-bottom:24px">Desarrollé Datavial para resolver un problema real que vi en el campo: empresas viales con flotas grandes manejadas con papeles, planillas desactualizadas y sin trazabilidad de los mantenimientos.</p>
         <p style="font-size:17px;color:var(--muted);line-height:1.8;font-weight:300;margin-bottom:24px">El sistema cubre todo el ciclo operativo — desde la asignación diaria del operario hasta el dashboard del dueño — con datos en tiempo real y sin necesidad de instalación.</p>
-        <p style="font-size:17px;color:var(--muted);line-height:1.8;font-weight:300">Mi rol es proveer la plataforma tecnológica, configurarla para cada empresa y dar soporte continuo. No intervengo físicamente en los equipos: me ocupo de que la información fluya correctamente entre todos los roles.</p>
+        <p style="font-size:17px;color:var(--muted);line-height:1.8;font-weight:300">Esto no es un software que se entrega y se abandona a su suerte: configuro cada equipo según su uso real, reviso que los datos tengan sentido, ajusto alertas a medida que la operación cambia y te ayudo a interpretar lo que los indicadores están diciendo. Es un acompañamiento activo — no una licencia que usás sola.</p>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px">
         <div style="background:#fff;border-radius:20px;padding:28px;box-shadow:0 2px 20px rgba(0,0,0,.06)">
-          <div style="font-family:'DM Serif Display',serif;font-size:40px;color:var(--navy);letter-spacing:-1px;margin-bottom:8px">5</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:40px;color:var(--navy);letter-spacing:-1px;margin-bottom:8px">7</div>
           <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Roles integrados en un solo sistema</div>
         </div>
         <div style="background:#fff;border-radius:20px;padding:28px;box-shadow:0 2px 20px rgba(0,0,0,.06)">
@@ -345,8 +365,8 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
           <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Adaptable a tu estructura y necesidades</div>
         </div>
         <div style="background:var(--navy);border-radius:20px;padding:28px">
-          <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:8px">Soporte incluido</div>
-          <div style="font-size:15px;color:rgba(255,255,255,.6);line-height:1.6">Configuración inicial, capacitación por videos y soporte técnico continuo por WhatsApp.</div>
+          <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:8px">Acompañamiento incluido</div>
+          <div style="font-size:15px;color:rgba(255,255,255,.6);line-height:1.6">Configuración inicial, capacitación por videos y seguimiento continuo por WhatsApp — no es soporte reactivo, es gestión activa.</div>
         </div>
       </div>
     </div>
@@ -395,7 +415,7 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
 <footer>
   <div>
     <div class="footer-logo"><span>Data</span><span>vial</span></div>
-    <p class="footer-tagline" style="margin-top:4px">Gestión de flota vial · Implementación · Soporte</p>
+    <p class="footer-tagline" style="margin-top:4px">Gestión de mantenimiento inteligente, con acompañamiento real</p>
   </div>
   <div><p class="footer-note">Servicio de gestión tecnológica — sin intervención física en equipos</p><a href="https://wa.me/543884771806" style="color:var(--green);font-size:12px;text-decoration:none">WhatsApp: 388 477-1806</a></div>
 </footer>
