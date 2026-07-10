@@ -499,6 +499,7 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
   </div>
   <div><p class="footer-note">Servicio de gestión tecnológica — sin intervención física en equipos</p><a href="https://wa.me/543884771806" style="color:var(--green);font-size:12px;text-decoration:none">WhatsApp: 388 477-1806</a></div>
 </footer>
+<p id="visit-count" style="text-align:center;font-size:10px;color:rgba(255,255,255,.15);background:#0d1e28;padding:0 0 14px;margin:0"></p>
 
 <script>
 // Nav scroll effect
@@ -518,6 +519,12 @@ document.getElementById('contactForm').addEventListener('submit',function(){
   btn.textContent='Enviando...'
   btn.disabled=true
 })
+
+// Contador de visitas (CountAPI — sin registro, sin claves)
+fetch('https://countapi.mileshilliard.com/api/v1/hit/datavial_web_visitas_2026')
+  .then(r=>r.json())
+  .then(d=>{ document.getElementById('visit-count').textContent = d.value + ' visitas' })
+  .catch(()=>{})
 </script>
 </body>
 </html>
