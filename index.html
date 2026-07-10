@@ -93,6 +93,30 @@ nav.scrolled{background:rgba(26,47,64,.95);backdrop-filter:blur(12px)}
 .feature-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:12px;letter-spacing:.5px}
 .feature-desc{font-size:15px;color:var(--muted);line-height:1.7;font-weight:300}
 
+/* ── INDICADORES (impacto, no actividad) ── */
+.indicadores{background:#0d1e28;padding:120px 40px}
+.indicadores-header{max-width:1200px;margin:0 auto 60px}
+.indicadores-header .label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+.indicadores-header h2{font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#fff;letter-spacing:-1px;line-height:1.15;max-width:720px;margin-bottom:20px}
+.indicadores-header h2 em{color:var(--green);font-style:italic}
+.indicadores-header p{font-size:16px;color:rgba(255,255,255,.45);max-width:600px;line-height:1.7;font-weight:300}
+.ind-table{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:2px;border-radius:20px;overflow:hidden}
+.ind-row{display:grid;grid-template-columns:64px 1.3fr 1fr 1.4fr;gap:24px;background:rgba(255,255,255,.03);padding:28px 32px;align-items:center;transition:background .3s}
+.ind-row:hover{background:rgba(46,204,113,.06)}
+.ind-num{width:44px;height:44px;border-radius:50%;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.3);display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:18px;color:var(--green)}
+.ind-nombre{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#fff;letter-spacing:.3px;margin-bottom:6px}
+.ind-mide{font-size:13px;color:rgba(255,255,255,.4);line-height:1.5}
+.ind-meta{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--green)}
+.ind-meta span{display:block;font-family:'DM Sans',sans-serif;font-weight:400;font-size:11px;color:rgba(255,255,255,.3);margin-top:2px}
+.ind-gerencia{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;font-style:italic}
+.ind-error{max-width:1200px;margin:32px auto 0;background:rgba(231,76,60,.08);border:1px solid rgba(231,76,60,.25);border-radius:16px;padding:24px 32px;display:flex;align-items:center;gap:20px}
+.ind-error-icon{font-size:24px;flex-shrink:0}
+.ind-error strong{color:#e74c3c;font-family:'Syne',sans-serif;font-size:13px;letter-spacing:.3px}
+.ind-error p{color:rgba(255,255,255,.5);font-size:14px;margin-top:4px;font-weight:300;line-height:1.6}
+.ind-quiere{max-width:1200px;margin:40px auto 0;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.ind-quiere-item{display:flex;align-items:center;gap:10px}
+.ind-quiere-item span{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4)}
+
 /* ── ISO ── */
 .iso{background:var(--navy);padding:80px 40px;display:flex;align-items:center;gap:60px;max-width:1200px;margin:0 auto}
 .iso-accent{width:4px;height:80px;background:var(--green);flex-shrink:0;border-radius:2px}
@@ -162,6 +186,11 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
   .form-row{grid-template-columns:1fr}
   .iso{flex-direction:column;padding:60px 20px}
   .iso-badge{margin:0}
+  .indicadores{padding:80px 20px}
+  .ind-row{grid-template-columns:1fr;gap:10px;padding:22px 20px}
+  .ind-num{margin-bottom:4px}
+  .ind-error{flex-direction:column;text-align:center;padding:20px}
+  .ind-quiere{gap:24px}
   footer{flex-direction:column;text-align:center;padding:30px 20px}
 }
 </style>
@@ -290,6 +319,57 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
       <div class="feature-title">App instalable sin internet</div>
       <div class="feature-desc">Funciona en zonas remotas sin conexión. Captura GPS y fotos, y cuando vuelve el internet sincroniza solo. Disponible en Android e iPhone.</div>
     </div>
+  </div>
+</section>
+
+<!-- INDICADORES DE IMPACTO -->
+<section class="indicadores">
+  <div class="indicadores-header reveal">
+    <p class="label">Para quien mide resultados</p>
+    <h2>Gerencia no quiere saber cuánto <em>trabajaste</em>.<br>Quiere saber cuánto <em>costó</em>, cuánto <em>falló</em> y cuánto perdiste por no prevenir.</h2>
+    <p>No reportes actividad. Reportá impacto. Estos son los indicadores que Datavial calcula solo, listos para mostrarle a Gerencia sin armar una planilla.</p>
+  </div>
+
+  <div class="ind-table reveal">
+    <div class="ind-row">
+      <div class="ind-num">1</div>
+      <div><div class="ind-nombre">Disponibilidad del equipo</div><div class="ind-mide">Horas operativas vs. horas totales del período</div></div>
+      <div class="ind-meta">&gt; 90%<span>en equipos críticos</span></div>
+      <div class="ind-gerencia">Si baja, Gerencia entiende que hay un problema de mantenimiento, no de esfuerzo.</div>
+    </div>
+    <div class="ind-row">
+      <div class="ind-num">2</div>
+      <div><div class="ind-nombre">Confiabilidad</div><div class="ind-mide">Correctivos y novedades sin resolver en el período</div></div>
+      <div class="ind-meta">Tendencia<span>decreciente mes a mes</span></div>
+      <div class="ind-gerencia">Si sube, indica que el mantenimiento preventivo no está funcionando.</div>
+    </div>
+    <div class="ind-row">
+      <div class="ind-num">3</div>
+      <div><div class="ind-nombre">Costo por hora operativa</div><div class="ind-mide">Gasto total del equipo dividido horas trabajadas</div></div>
+      <div class="ind-meta">Según<span>referencia por tipo de equipo</span></div>
+      <div class="ind-gerencia">Muestra qué equipo conviene y cuál está costando más de lo que rinde.</div>
+    </div>
+    <div class="ind-row">
+      <div class="ind-num">4</div>
+      <div><div class="ind-nombre">Cumplimiento del plan preventivo</div><div class="ind-mide">Services hechos a tiempo vs. programados</div></div>
+      <div class="ind-meta">&gt; 85%<span>de cumplimiento</span></div>
+      <div class="ind-gerencia">Si baja, el correctivo se está comiendo el tiempo que debería usarse en prevenir.</div>
+    </div>
+  </div>
+
+  <div class="ind-error reveal">
+    <div class="ind-error-icon">⚠️</div>
+    <div>
+      <strong>EL ERROR MÁS COMÚN</strong>
+      <p>Reportar actividad en lugar de impacto: Gerencia no necesita saber que se cerraron 200 órdenes de trabajo, necesita saber si el activo está disponible, cuánto costó mantenerlo y si se está cumpliendo el plan.</p>
+    </div>
+  </div>
+
+  <div class="ind-quiere reveal">
+    <div class="ind-quiere-item">📈 <span>Disponibilidad</span></div>
+    <div class="ind-quiere-item">🛡️ <span>Confiabilidad</span></div>
+    <div class="ind-quiere-item">💰 <span>Costos bajo control</span></div>
+    <div class="ind-quiere-item">📊 <span>Decisiones basadas en datos</span></div>
   </div>
 </section>
 
