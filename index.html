@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Datavial — Gestión de Flota Vial</title>
 <meta name="description" content="Sistema de gestión de mantenimiento y operaciones para empresas de construcción vial. Control total de tu flota desde cualquier celular."/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://datavial.com.ar/"/>
+<meta property="og:title" content="Datavial — Gestión de Flota Vial y Minera"/>
+<meta property="og:description" content="Sistema de gestión de mantenimiento y operaciones para empresas de construcción vial. Control total de tu flota desde cualquier celular."/>
+<meta property="og:image" content="https://datavial.com.ar/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="es_AR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Datavial — Gestión de Flota Vial y Minera"/>
+<meta name="twitter:description" content="Sistema de gestión de mantenimiento y operaciones para empresas de construcción vial. Control total de tu flota desde cualquier celular."/>
+<meta name="twitter:image" content="https://datavial.com.ar/og-image.png"/>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"/>
 <style>
@@ -386,6 +400,17 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
       <strong>ISO 9001</strong>
     </div>
   </div>
+  <div class="iso reveal">
+    <div class="iso-accent"></div>
+    <div>
+      <h3>Cada empresa, su propia base de datos</h3>
+      <p>Ningún cliente comparte información con otro: equipos, costos, ubicaciones y calificaciones quedan completamente aislados entre sí. Tu operación es tuya, punto.</p>
+    </div>
+    <div class="iso-badge">
+      <span>Seguridad</span>
+      <strong>Datos aislados</strong>
+    </div>
+  </div>
 </div>
 
 <!-- PROCESO -->
@@ -499,7 +524,6 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
   </div>
   <div><p class="footer-note">Servicio de gestión tecnológica — sin intervención física en equipos</p><a href="https://wa.me/543884771806" style="color:var(--green);font-size:12px;text-decoration:none">WhatsApp: 388 477-1806</a></div>
 </footer>
-<p id="visit-count" style="text-align:center;font-size:10px;color:rgba(255,255,255,.15);background:#0d1e28;padding:0 0 14px;margin:0"></p>
 
 <script>
 // Nav scroll effect
@@ -519,12 +543,6 @@ document.getElementById('contactForm').addEventListener('submit',function(){
   btn.textContent='Enviando...'
   btn.disabled=true
 })
-
-// Contador de visitas (CountAPI — sin registro, sin claves)
-fetch('https://countapi.mileshilliard.com/api/v1/hit/datavial_web_visitas_2026')
-  .then(r=>r.json())
-  .then(d=>{ document.getElementById('visit-count').textContent = d.value + ' visitas' })
-  .catch(()=>{})
 </script>
 </body>
 </html>
