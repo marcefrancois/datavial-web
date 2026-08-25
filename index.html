@@ -95,6 +95,24 @@ nav.scrolled{background:rgba(26,47,64,.95);backdrop-filter:blur(12px)}
 .roles-note{max-width:1200px;margin:24px auto 0;text-align:center;font-size:13px;color:rgba(255,255,255,.35);font-style:italic}
 .roles-note strong{color:var(--green);font-style:normal}
 
+.shots{background:var(--navy);padding:0 40px 130px}
+.shots-header{max-width:1200px;margin:0 auto 60px;text-align:center}
+.shots-header .label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+.shots-header h2{font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#fff;letter-spacing:-1px;margin-bottom:16px}
+.shots-header p{color:rgba(255,255,255,.5);font-size:16px;max-width:520px;margin:0 auto}
+.shot-hero{max-width:980px;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 50px 100px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.08)}
+.shot-hero .shot-chrome{background:#0f1e29;padding:11px 16px;display:flex;gap:6px}
+.shot-hero .shot-chrome span{width:10px;height:10px;border-radius:50%;display:block}
+.shot-hero img{width:100%;display:block}
+.shot-caption{text-align:center;color:rgba(255,255,255,.4);font-size:13px;margin-top:20px;font-style:italic}
+.shots-row{max-width:980px;margin:70px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.shot-card{text-align:center}
+.shot-frame{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 24px 50px rgba(0,0,0,.35);margin-bottom:20px}
+.shot-frame img{width:100%;display:block}
+.shot-role{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--green);margin-bottom:4px}
+.shot-desc{font-size:13px;color:rgba(255,255,255,.45)}
+@media(max-width:900px){.shots-row{grid-template-columns:1fr;max-width:420px}}
+
 /* ── FEATURES ── */
 .features{padding:120px 40px;max-width:1200px;margin:0 auto}
 .features-header{margin-bottom:80px}
@@ -274,6 +292,43 @@ footer{background:#0d1e28;padding:40px;display:flex;align-items:center;justify-c
     <div class="role-card"><span class="role-icon">📊</span><div class="role-name">Dueño</div><div class="role-desc">Tablero ejecutivo y pantalla TV. Ve el estado, la calificación y los costos de toda la flota desde cualquier dispositivo.</div></div>
   </div>
   <p class="roles-note">+ <strong>Expansible</strong>: el sistema suma roles y funciones nuevas a medida que tu empresa lo necesita.</p>
+</section>
+
+<!-- CAPTURAS DE PANTALLA -->
+<section class="shots">
+  <div class="shots-header reveal">
+    <p class="label">Así se ve en la práctica</p>
+    <h2>No es una idea en un slide</h2>
+    <p>Estas son pantallas reales del sistema, con datos de una operación completa cargados.</p>
+  </div>
+
+  <div class="shot-hero reveal">
+    <div class="shot-chrome">
+      <span style="background:#ff5f57"></span>
+      <span style="background:#febc2e"></span>
+      <span style="background:#28c840"></span>
+    </div>
+    <img src="screenshots/tv-dashboard.jpg" alt="Panel de control en vivo de toda la flota, con mapa de ubicaciones"/>
+  </div>
+  <p class="shot-caption">Pantalla en vivo — el estado de toda la flota, de un vistazo</p>
+
+  <div class="shots-row reveal">
+    <div class="shot-card">
+      <div class="shot-frame"><img src="screenshots/operario.jpg" alt="Vista del Operario: checklist pre-operacional desde el celular"/></div>
+      <p class="shot-role">👷 Operario</p>
+      <p class="shot-desc">Checklist y parte diario desde el celular</p>
+    </div>
+    <div class="shot-card">
+      <div class="shot-frame"><img src="screenshots/mecanico.jpg" alt="Vista del Mecánico: carga de intervención con preparación de la tarea"/></div>
+      <p class="shot-role">🔧 Mecánico</p>
+      <p class="shot-desc">Intervenciones con permiso de trabajo y LOTO</p>
+    </div>
+    <div class="shot-card">
+      <div class="shot-frame"><img src="screenshots/jefe-obra.jpg" alt="Vista del Jefe de Obra: novedades e historial de mantenimiento"/></div>
+      <p class="shot-role">🦺 Jefe de Obra</p>
+      <p class="shot-desc">Novedades y alertas, filtrables e imprimibles</p>
+    </div>
+  </div>
 </section>
 
 <!-- FEATURES -->
